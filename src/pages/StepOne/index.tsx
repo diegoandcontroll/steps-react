@@ -1,6 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { ChangeEvent, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import { SelectOption } from '../../components/selectInput';
 import { StepActions, useStep } from '../../context/StepsContext';
 import * as C from './style';
 export const StepOne = () => {
