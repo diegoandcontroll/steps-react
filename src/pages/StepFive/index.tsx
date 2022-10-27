@@ -44,7 +44,7 @@ export const StepFive = () => {
           </C.WrapperItem>
         </C.Wrapper>
         <div style={{marginLeft: '20rem', marginTop: '7.5rem'}}>
-          <button className='finally_button' onClick={() => window.location.reload()}>Finalizar</button>
+          <button className='finally_button' onClick={() => window.location.href = '/'}>Finalizar</button>
         </div>
         
       </C.Content>
