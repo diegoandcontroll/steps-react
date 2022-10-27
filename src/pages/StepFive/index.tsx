@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-mixed-operators */
 import React, { ChangeEvent, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
