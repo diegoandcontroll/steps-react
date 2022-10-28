@@ -25,7 +25,7 @@ export const StepFive = () => {
   return (
     <>
     <div style={{marginTop: '8rem'}}>
-      <div style={{marginLeft: '8rem',width: '1000px', height: '10px', backgroundColor: '#F8C70E', borderRadius: '10px'}}>
+      <div style={{marginLeft: '11rem',width: '1000px', height: '10px', backgroundColor: '#F8C70E', borderRadius: '10px'}}>
         <C.Point />
         <C.SecondPoint />
         <C.ThreePoint />
