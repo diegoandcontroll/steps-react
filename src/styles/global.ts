@@ -1,3 +1,4 @@
+import { darken } from 'polished';
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
@@ -24,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
   body {
-    background: var(--primary);
+    background-image: linear-gradient(to left, #502BBe,#651BBC,#574BBC, #574BBC );
     -webkit-font-smoothing: antialiased;
     @media (max-width: 720px) {
       font-size: 87.5%;
@@ -57,23 +58,32 @@ export const GlobalStyle = createGlobalStyle`
     background: transparent;
   }
   .prev-button{
-    font-size: 54px;
+    width: 225px;
+    height: 40px;
+    background-color: #83E193;
+    border-radius: 25px;
+    font-size: 1.5rem;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    line-height: 66px;
+    line-height: 42px;
   }
   .button{
-    width: 266px;
-    height: 50px;
-    border-radius: 50px;
+    width: 225px;
+    height: 40px;
+    border-radius: 25px;
     background-color: #83E193;
     font-weight: 700;
-    font-size: 37px;
+    font-size: 1.5rem;
     line-height: 42px;
     text-align: center;
     outline: none;
     border: none;
+    opacity: 0.6;
+    transition: 0.3s;
+    &:hover{
+      opacity: 1;
+    }
   }
   .react-modal-overlay {
     background: rgba(0, 0, 0, 0.5);

@@ -5,11 +5,14 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`
+export const BarsWrapper = styled.div`
+
 `;
 export const Point = styled.div`
     width: 32px;
     height: 32px;
-    border: none;
+    border: 2px solid #F8C70E;
     border-radius: 50%;
     margin-left: 30px;
     margin-right: -0px;
@@ -64,20 +67,11 @@ export const FivePoint = styled.div`
   border-radius: 50%;
   margin-left: 30px;
   margin-right: -12px;
-  background-color: #574BBC;
+  background-color: #F8C70E;
   position: relative;
   top: -8.85rem;
   left: 59rem;
 `;
-export const Wrapper = styled.div`
-  margin-left: 20rem;
-  margin-top: 4rem;
-  display: flex;
-  justify-content: space-around;
-  gap: 10rem;
-`;
-export const WrapperItem = styled.div``;
-
 export const Content = styled.main`
   display: flex;
   justify-content: center;
@@ -85,17 +79,18 @@ export const Content = styled.main`
   margin-right: 25rem;
   flex-direction: column;
 
-  h1{
+  h3{
     font-weight: 500;
-    font-size: 50px;
+    font-size: 45px;
     line-height: 79px;
     text-align: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    padding-left: 10rem;
+    margin-left: 6.4rem;
   }
 
   .inputs_step_1{
+    margin-left: 12.5rem;
     label {
       font-size: 26px;
       line-height: 31px;
@@ -106,7 +101,7 @@ export const Content = styled.main`
         width: 532px;
         height: 50px;
         background-color: #8377EF;
-        border-radius: 50px;
+        border-radius: 10px;
         border: 2px solid #fff;
         color: #fff;
         font-size: 31px;

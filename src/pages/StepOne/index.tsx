@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { ChangeEvent, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { SelectOption } from '../../components/selectInput';
 import { StepActions, useStep } from '../../context/StepsContext';
 import * as C from './style';
 export const StepOne = () => {
@@ -26,6 +27,12 @@ export const StepOne = () => {
       payload: e.target.value
     })
   }
+  const setEventType = (arg: string) => {
+    dispatch({
+      type: StepActions.setEventType,
+      payload: arg
+    })
+  }
   const handleChangeTypeEvent  = (e: ChangeEvent<HTMLSelectElement>) => {
     dispatch({
       type: StepActions.setEventType,
@@ -34,7 +41,7 @@ export const StepOne = () => {
   }
   return (
     <>
-    <div style={{marginTop: '8rem'}}>
+    <div style={{marginTop: '4rem'}}>
       <div style={{marginLeft: '11rem',width: '1000px', height: '10px', backgroundColor: '#F8C70E', borderRadius: '10px'}}>
         <C.Point />
         <C.SecondPoint />
@@ -45,7 +52,7 @@ export const StepOne = () => {
     </div>
     <C.Container>
       <C.Content>
-        <h1>Português</h1>
+        <h1>{state.subject}</h1>
 
         <div className='inputs_step_1'>
           <label htmlFor="unit">
@@ -60,16 +67,14 @@ export const StepOne = () => {
           <label htmlFor="typeEvent">
             Evento
           </label>
-          <C.Select name="" id="" onChange={handleChangeTypeEvent} value={state.eventType}>
-            <option value="0">Aulão - Prova</option>
-            <option value="1">Aulão - Teórica</option>
-          </C.Select>
-          {/* <SelectOption title="Aulão - Prova" selected={state.eventType === '0'} onClick={() => setEventType('0')}/>
-          <SelectOption title="Aulão - Teórica" selected={state.eventType === '1'} onClick={() => setEventType('1')}/> */}
+          <SelectOption title="Aulão - Prova" selected={state.eventType === '0'} onClick={() => setEventType('0')}/>
+          <SelectOption title="Aulão - Teórica" selected={state.eventType === '1'} onClick={() => setEventType('1')}/>
+          <SelectOption title="Aulão - Laboratório" selected={state.eventType === '2'} onClick={() => setEventType('2')}/>
         </div>
-        <div style={{marginLeft: '28.8rem', marginTop: '0.5rem'}}>
+        <C.WrapperButtons>
+          <Link to="/" className='button'>voltar</Link>
           <button onClick={handleNextStep} className='button'>Avançar</button>
-        </div>
+        </C.WrapperButtons>
         
       </C.Content>
     </C.Container>

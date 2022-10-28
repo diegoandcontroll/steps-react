@@ -7,12 +7,12 @@ export const Container = styled.div`
   align-items: center;
 `
 export const WrapperButtons = styled.div`
-  margin-top: 7.48rem;
-  margin-left: 14.5rem;
+  padding-top: 1rem;
+  margin-left: 12.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 5rem;
+  gap: 3rem;
 `;
 export const Point = styled.div`
     width: 32px;
@@ -86,11 +86,12 @@ export const Content = styled.main`
 
   h1{
     font-weight: 500;
-    font-size: 65px;
+    font-size: 50px;
     line-height: 79px;
     text-align: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    padding-left: 10rem;
   }
 
   .inputs_step_1{
@@ -105,7 +106,7 @@ export const Content = styled.main`
         width: 532px;
         height: 50px;
         background-color: #8377EF;
-        border-radius: 50px;
+        border-radius: 10px;
         border: 2px solid #fff;
         color: #fff;
         font-size: 31px;

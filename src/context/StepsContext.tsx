@@ -2,11 +2,12 @@ import { createContext, ReactNode, useContext, useReducer } from "react";
 type State = {
   currentStep: number;
   unit: string;
-  eventType: '0' | '1';
+  eventType: '0' | '1' | '2';
   hours: '1' | '2' | '3';
   dateEvent: string;
   participants: number;
-  vacancies: 150 | 180
+  vacancies: 100 | 150 | 200;
+  subject: string;
 }
 type Action = {
   type: StepActions;
@@ -29,6 +30,7 @@ const initialData: State = {
   dateEvent: '27/10/2022',
   participants: 0,
   vacancies: 150,
+  subject: 'Português'
 }
 const StepsContext = createContext<ContextType | undefined>(undefined)
 
@@ -39,7 +41,8 @@ export enum StepActions {
   setDateEvent,
   setHours,
   setParticipants,
-  setVacancies
+  setVacancies,
+  setSubject
 }
 const stepReducer = (state: State, action: Action) => {
   switch(action.type){
@@ -57,6 +60,8 @@ const stepReducer = (state: State, action: Action) => {
       return {...state, participants: action.payload}
     case StepActions.setVacancies:
       return {...state, vacancies: action.payload}
+    case StepActions.setSubject:
+      return {...state, subject: action.payload}
     default:
       return state
   }
