@@ -5,6 +5,18 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`
+export const WrapperButtons = styled.div`
+  padding-top: 1rem;
+  margin-left: 12.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-right: -16rem;
+  }
 `;
 export const Point = styled.div`
     width: 32px;
@@ -25,7 +37,7 @@ export const SecondPoint = styled.div`
     border-radius: 50%;
     margin-left: 30px;
     margin-right: -12px;
-    background-color: #F8C70E;
+    background-color: #574BBC;
     position: relative;
     top: -2.8rem;
     left: 12rem;
@@ -51,7 +63,7 @@ export const FourPoint = styled.div`
   border-radius: 50%;
   margin-left: 30px;
   margin-right: -12px;
-  background-color: #574BBC;
+  background-color: #F8C70E;
   position: relative;
   top: -6.85rem;
   left: 45rem;
@@ -68,14 +80,6 @@ export const FivePoint = styled.div`
   position: relative;
   top: -8.85rem;
   left: 59rem;
-`;
-export const WrapperButtons = styled.div`
-  padding-top: 1rem;
-  margin-left: 12.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3rem;
 `;
 export const Content = styled.main`
   display: flex;
@@ -95,10 +99,19 @@ export const Content = styled.main`
     padding-top: 2rem;
     padding-bottom: 2rem;
     padding-left: 10rem;
+    @media (max-width: 768px) {
+      padding-bottom: 0rem;
+      padding-top: 0rem;
+      font-size: 40px;
+      padding-left: 0rem;
+    }
   }
 
   .inputs_step_1{
     margin-left: 12.5rem;
+    @media (max-width: 768px) {
+      padding-right: 12rem;
+    }
     label {
       font-size: 26px;
       line-height: 31px;
@@ -109,14 +122,18 @@ export const Content = styled.main`
         width: 532px;
         height: 50px;
         background-color: #8377EF;
-        border-radius: 50px;
+        border-radius: 10px;
         border: 2px solid #fff;
         color: #fff;
         font-size: 31px;
         line-height: 38px;
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 10px;
         outline: none;
+        @media (max-width: 768px) {
+          width: 300px;
+          font-size: 25px;
+        }
       }
     }
   }

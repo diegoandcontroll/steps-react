@@ -13,10 +13,11 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
     color: #ffffff;
-    overflow: none;
+    overflow: hidden;
   
   }
   html {
+    overflow: hidden;
     @media (max-width: 1080px) {
       font-size: 93.75%;
     }
@@ -29,6 +30,7 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     @media (max-width: 720px) {
       font-size: 87.5%;
+      overflow: none;
     }
   }
   body, input, textarea, button {
@@ -56,9 +58,11 @@ export const GlobalStyle = createGlobalStyle`
     text-align: center;
     font-weight: 700;
     background: transparent;
+    margin-left: 8rem;
+    margin-top: 6rem;
     @media (max-width: 768px) {
       margin-top: 2rem;
-      margin-left: 8rem;
+      margin-left: 2rem;
     }
   }
   .prev-button{
@@ -71,6 +75,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     line-height: 42px;
+   
   }
   .button{
     width: 225px;
@@ -87,6 +92,9 @@ export const GlobalStyle = createGlobalStyle`
     transition: 0.3s;
     &:hover{
       opacity: 1;
+    }
+    @media (max-width: 768px) {
+      margin-right: 28rem;
     }
   }
   .react-modal-overlay {

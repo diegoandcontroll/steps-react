@@ -42,9 +42,9 @@ export const Home = () => {
           {/* <SelectOption title="Aulão - Prova" selected={state.eventType === '0'} onClick={() => setEventType('0')}/>
           <SelectOption title="Aulão - Teórica" selected={state.eventType === '1'} onClick={() => setEventType('1')}/> */}
         </div>
-        <div style={{marginLeft: '28.8rem'}}>
+        <C.WrapperButtonHome>
           <button onClick={handleNextStep} className='button'>Avançar</button>
-        </div>
+        </C.WrapperButtonHome>
         
       </C.Content>
     </C.Container>

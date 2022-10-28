@@ -16,10 +16,11 @@ export const Container = styled.div`
 
   @media (max-width: 768px) {
     overflow: none;
-    margin-top: 12rem;
+    margin-top: 6rem;
+    display: none;
     .wrapper_steps{
-      margin-left: 0.5rem;
-      width: 600px;
+      margin-left: 1.5rem;
+      width: 350px;
       height: 12px;
       background-color: #F8C70E;
       border-radius: 10px;
@@ -34,9 +35,9 @@ export const Point = styled.div<Props>`
     margin-left: 30px;
     margin-right: -0px;
     background-color: ${props => props.step === 1 ? '#574BBC' : '#F8C70E'};
-    position: relative;
-    top: -0.8rem;
-    left: -2rem;
+    position: absolute;
+    top: 3.2rem;
+    left: 8rem;
     @media (max-width: 768px) {
       left: -2.8rem;
     }
@@ -49,9 +50,9 @@ export const SecondPoint = styled.div<Props>`
     margin-left: 30px;
     margin-right: -12px;
     background-color: ${props => props.step === 2 ? '#574BBC' : '#F8C70E'};
-    position: relative;
-    top: -2.8rem;
-    left: 12rem;
+    position: absolute;
+    top: 3.2rem;
+    left: 20rem;
     @media (max-width: 768px) {
       top: -3.1rem;
       left: 8rem;
@@ -66,9 +67,9 @@ export const ThreePoint = styled.div<Props>`
   margin-left: 30px;
   margin-right: -12px;
   background-color: ${props => props.step === 3 ? '#574BBC' : '#F8C70E'};
-  position: relative;
-  top: -4.85rem;
-  left: 30rem;
+  position: absolute;
+  top: 3.2rem;
+  left: 38rem;
   @media (max-width: 768px) {
     top: -5.3rem;
     left: 18rem;
@@ -83,9 +84,9 @@ export const FourPoint = styled.div<Props>`
   margin-left: 30px;
   margin-right: -12px;
   background-color: ${props => props.step === 4 ? '#574BBC' : '#F8C70E'};
-  position: relative;
-  top: -6.85rem;
-  left: 45rem;
+  position: absolute;
+  top: 3.2rem;
+  left: 54rem;
   @media (max-width: 768px) {
     top: -7.6rem;
     left: 29rem;
@@ -100,9 +101,9 @@ export const FivePoint = styled.div<Props>`
   margin-left: 30px;
   margin-right: -12px;
   background-color: ${props => props.step === 5 ? '#574BBC' : '#F8C70E'};
-  position: relative;
-  top: -8.85rem;
-  left: 59rem;
+  position: absolute;
+  top: 3.2rem;
+  left: 70rem;
   @media (max-width: 768px) {
     left: 38.4rem;
     top: -9.85rem;

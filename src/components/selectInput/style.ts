@@ -18,6 +18,9 @@ export const Container = styled.div<{ selected: boolean; }>`
     &:hover {
         opacity: 1;
     }
+    @media (max-width: 768px) {
+        width: 300px;
+    }
 `;
 
 export const Icon = styled.div`
