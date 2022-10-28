@@ -1,7 +1,7 @@
 import { BrowserRouter, Route } from 'react-router-dom';
 import { StepFive } from './pages/StepFive';
 import { StepFour } from './pages/StepFour';
-import { StepThree } from './pages/StepThree3';
+import { StepThree } from './pages/StepThree';
 import { StepTwo } from './pages/StepTwo';
 import {StepOne} from './pages/StepOne';
 

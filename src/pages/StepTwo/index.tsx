@@ -40,7 +40,13 @@ export const StepTwo = () => {
   return (
     <>
     <div style={{marginTop: '8rem'}}>
-      <div style={{marginLeft: '10rem',width: '1000px', height: '10px', backgroundColor: '#F8C70E', borderRadius: '10px'}}></div>
+      <div style={{marginLeft: '8rem',width: '1000px', height: '10px', backgroundColor: '#F8C70E', borderRadius: '10px'}}>
+        <C.Point />
+        <C.SecondPoint />
+        <C.ThreePoint />
+        <C.FourPoint />
+        <C.FivePoint />
+      </div>
     </div>
     <C.Container>
       <C.Content>
