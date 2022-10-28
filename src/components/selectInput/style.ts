@@ -13,9 +13,10 @@ export const Container = styled.div<{ selected: boolean; }>`
     align-items: center;
     text-align: center;
     cursor: pointer;
+    opacity: ${props => props.selected? 1 : 0.6};
+    transition: 0.5s;
     &:hover {
-        border: 2px solid #F8C76E;
-        background-color: ${darken(0.1,'#8377EF')};
+        opacity: 1;
     }
 `;
 
