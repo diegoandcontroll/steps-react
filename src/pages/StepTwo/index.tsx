@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { ChangeEvent, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { SelectOption } from '../../components/selectInput';
 import { StepActions, useStep } from '../../context/StepsContext';
 import * as C from './style';
 export const StepTwo = () => {
@@ -28,22 +29,21 @@ export const StepTwo = () => {
     } 
     
   }
+  const setHours = (hours: string) => {
+    dispatch({
+      type: StepActions.setHours,
+      payload: hours
+    })
+  }
   const handleChangeDateEvent = (e: ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type: StepActions.setDateEvent,
       payload: e.target.value
     })
   }
-  const handleChangeHours  = (e: ChangeEvent<HTMLSelectElement>) => {
-    dispatch({
-      type: StepActions.setHours,
-      payload: e.target.value,
-    })
-  }
-  
   return (
     <>
-    <div style={{marginTop: '8rem'}}>
+    <div style={{marginTop: '4rem'}}>
       <div style={{marginLeft: '11rem',width: '1000px', height: '10px', backgroundColor: '#F8C70E', borderRadius: '10px'}}>
         <C.Point />
         <C.SecondPoint />
@@ -54,7 +54,7 @@ export const StepTwo = () => {
     </div>
     <C.Container>
       <C.Content>
-        <h1>Português</h1>
+        <h1>{state.subject}</h1>
 
         <div className='inputs_step_1'>
           <label htmlFor="dateEvent">
@@ -69,14 +69,22 @@ export const StepTwo = () => {
           <label htmlFor="hours">
             Tempo de Aula
           </label>
-          <C.Select name="" id="" onChange={handleChangeHours} value={state.hours}>
-            <option value="1">1 Hora</option>
-            <option value="2">2 Horas</option>
-            <option value="3">3 Horas</option>
-          </C.Select>
+          <SelectOption 
+          title="1 Hora" 
+          selected={state.hours === '1'} 
+          onClick={() => 
+          setHours('1')}/>
+          <SelectOption 
+          title="2 Horas" 
+          selected={state.hours === '2'} 
+          onClick={() => setHours('2')}/>
+          <SelectOption 
+          title="3 Horas" 
+          selected={state.hours === '3'} 
+          onClick={() => setHours('3')}/>
         </div>
         <C.WrapperButtons>
-          <Link to="/" className='prev-button'>voltar</Link>
+          <Link to="/step" className='button'>voltar</Link>
           <button onClick={handleNextStep} className='button'>Avançar</button>
         </C.WrapperButtons>
         

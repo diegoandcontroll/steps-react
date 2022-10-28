@@ -1,17 +1,21 @@
+import { darken } from "polished";
 import styled from "styled-components";
 
 export const Container = styled.div<{ selected: boolean; }>`
     display: flex;
     border: 2px solid ${props => props.selected ? '#F8C70E' : '#fff'};
-    border-radius: 50px;
-    background-color: #8377EF;
+    border-radius: 10px;
+    background-color: ${props => props.selected ? darken(0.1,'#8377EF'): '#8377EF'};
     width: 532px;
     height: 50px;
+    margin-top: 10px;
     margin-bottom: 15px;
     align-items: center;
+    text-align: center;
     cursor: pointer;
     &:hover {
         border: 2px solid #F8C76E;
+        background-color: ${darken(0.1,'#8377EF')};
     }
 `;
 

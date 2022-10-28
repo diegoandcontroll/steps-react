@@ -1,37 +1,25 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { ChangeEvent, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React, { ChangeEvent} from 'react';
+import { useHistory } from 'react-router-dom';
 import { StepActions, useStep } from '../../context/StepsContext';
 import * as C from './style';
-export const StepThree = () => {
+export const Home = () => {
   const history = useHistory();
   const {state, dispatch} = useStep();
-  useEffect(() => {
-    if(state.unit === ''){
-      history.push('/');
-    }else{
-      dispatch({
-        type: StepActions.setCurrentStep,
-        payload: 3
-      })
-    }
-    
-  },[])
   const handleNextStep = () => {
-    if(state.participants > 0){
-      history.push('/step4');
+    if(state.subject !== ''){
+      history.push('/step');
     }else{
-      alert('Not Participants');
+      alert('Subject is empty');
     }
     
   }
-  const handleChangeParticipants = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChangeSubject  = (e: ChangeEvent<HTMLInputElement>) => {
     dispatch({
-      type: StepActions.setParticipants,
-      payload: e.target.value
+      type: StepActions.setSubject,
+      payload: e.target.value,
     })
   }
-  
   return (
     <>
     <div style={{marginTop: '4rem'}}>
@@ -45,23 +33,25 @@ export const StepThree = () => {
     </div>
     <C.Container>
       <C.Content>
-        <h1>{state.subject}</h1>
+        <h3>Informe a disciplina!</h3>
 
         <div className='inputs_step_1'>
-          <label htmlFor="participants">
-            Participantes
+          <label htmlFor="unit">
+            Disciplina
             <input 
             type='text' 
             autoFocus 
-            value={state.participants}
-            onChange={handleChangeParticipants}
+            value={state.subject}
+            onChange={handleChangeSubject}
             />
           </label>
+          
+          {/* <SelectOption title="Aulão - Prova" selected={state.eventType === '0'} onClick={() => setEventType('0')}/>
+          <SelectOption title="Aulão - Teórica" selected={state.eventType === '1'} onClick={() => setEventType('1')}/> */}
         </div>
-        <C.WrapperButtons>
-          <Link to="/step2" className='button'>voltar</Link>
+        <div style={{marginLeft: '28.8rem'}}>
           <button onClick={handleNextStep} className='button'>Avançar</button>
-        </C.WrapperButtons>
+        </div>
         
       </C.Content>
     </C.Container>

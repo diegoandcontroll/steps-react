@@ -24,7 +24,7 @@ export const StepFive = () => {
   
   return (
     <>
-    <div style={{marginTop: '8rem'}}>
+    <div style={{marginTop: '4rem'}}>
       <div style={{marginLeft: '11rem',width: '1000px', height: '10px', backgroundColor: '#F8C70E', borderRadius: '10px'}}>
         <C.Point />
         <C.SecondPoint />
@@ -35,7 +35,7 @@ export const StepFive = () => {
     </div>
     <C.Container>
       <C.Content>
-        <h1>Português</h1>
+        <h1>{state.subject}</h1>
         <C.Wrapper>
           <C.WrapperItem>
             <h4 style={{paddingBottom: '10px'}}>Evento: Aula</h4>
