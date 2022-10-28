@@ -22,6 +22,10 @@ export const StepTwo = () => {
     }else{
       alert('Change date time!');
     }
+    if(state.dateEvent.length !== 10){
+      alert('Date Invalid insert */  dd/mm/yy  */')!
+      history.push('/step2');
+    } 
     
   }
   const handleChangeDateEvent = (e: ChangeEvent<HTMLInputElement>) => {
