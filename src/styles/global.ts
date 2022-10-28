@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
     color: #ffffff;
+    overflow: none;
   
   }
   html {
@@ -55,6 +56,10 @@ export const GlobalStyle = createGlobalStyle`
     text-align: center;
     font-weight: 700;
     background: transparent;
+    @media (max-width: 768px) {
+      margin-top: 2rem;
+      margin-left: 8rem;
+    }
   }
   .prev-button{
     width: 225px;

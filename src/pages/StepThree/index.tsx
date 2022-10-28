@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { ChangeEvent, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { StepBar } from '../../components/StepBar';
 import { StepActions, useStep } from '../../context/StepsContext';
 import * as C from './style';
 export const StepThree = () => {
@@ -34,15 +35,7 @@ export const StepThree = () => {
   
   return (
     <>
-    <div style={{marginTop: '4rem'}}>
-      <div style={{marginLeft: '11rem',width: '1000px', height: '10px', backgroundColor: '#F8C70E', borderRadius: '10px'}}>
-        <C.Point />
-        <C.SecondPoint />
-        <C.ThreePoint />
-        <C.FourPoint />
-        <C.FivePoint />
-      </div>
-    </div>
+    <StepBar currentStep={3} />
     <C.Container>
       <C.Content>
         <h1>{state.subject}</h1>

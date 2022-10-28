@@ -76,7 +76,9 @@ export const Wrapper = styled.div`
   justify-content: space-around;
   gap: 10rem;
 `;
-export const WrapperItem = styled.div``;
+export const WrapperItem = styled.div`
+  
+`;
 
 export const Content = styled.main`
   display: flex;
@@ -84,7 +86,10 @@ export const Content = styled.main`
   align-items: center;
   margin-right: 25rem;
   flex-direction: column;
-
+  @media (max-width: 768px) {
+    margin-right: 0rem;
+    margin-top: 4rem;
+  }
   h1{
     font-weight: 500;
     font-size: 50px;

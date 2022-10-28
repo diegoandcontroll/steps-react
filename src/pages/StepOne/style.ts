@@ -83,7 +83,10 @@ export const Content = styled.main`
   align-items: center;
   margin-right: 25rem;
   flex-direction: column;
-
+  @media (max-width: 768px) {
+    margin-right: 0rem;
+    margin-top: 4rem;
+  }
   h1{
     font-weight: 500;
     font-size: 50px;
