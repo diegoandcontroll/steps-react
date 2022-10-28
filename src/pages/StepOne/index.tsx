@@ -33,12 +33,6 @@ export const StepOne = () => {
       payload: arg
     })
   }
-  const handleChangeTypeEvent  = (e: ChangeEvent<HTMLSelectElement>) => {
-    dispatch({
-      type: StepActions.setEventType,
-      payload: e.target.value,
-    })
-  }
   return (
     <>
     <div style={{marginTop: '4rem'}}>
