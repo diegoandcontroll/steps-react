@@ -3,6 +3,7 @@
 /* eslint-disable no-mixed-operators */
 import React, { ChangeEvent, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import { StepBar } from '../../components/StepBar';
 import { StepActions, useStep } from '../../context/StepsContext';
 import * as C from './style';
 import {} from './style';
@@ -24,15 +25,7 @@ export const StepFive = () => {
   
   return (
     <>
-    <div style={{marginTop: '4rem'}}>
-      <div style={{marginLeft: '11rem',width: '1000px', height: '10px', backgroundColor: '#F8C70E', borderRadius: '10px'}}>
-        <C.Point />
-        <C.SecondPoint />
-        <C.ThreePoint />
-        <C.FourPoint />
-        <C.FivePoint />
-      </div>
-    </div>
+    <StepBar currentStep={5} />
     <C.Container>
       <C.Content>
         <h1>{state.subject}</h1>
@@ -49,9 +42,9 @@ export const StepFive = () => {
 
           </C.WrapperItem>
         </C.Wrapper>
-        <div style={{marginLeft: '20rem', marginTop: '7.5rem'}}>
+        <C.WrapperItem>
           <button className='finally_button' onClick={() => window.location.href = '/'}>Finalizar</button>
-        </div>
+        </C.WrapperItem>
         
       </C.Content>
     </C.Container>

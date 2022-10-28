@@ -2,6 +2,7 @@
 import React, {  useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { SelectOption } from '../../components/selectInput';
+import { StepBar } from '../../components/StepBar';
 import { StepActions, useStep } from '../../context/StepsContext';
 import * as C from './style';
 export const StepFour = () => {
@@ -30,15 +31,7 @@ export const StepFour = () => {
   
   return (
     <>
-    <div style={{marginTop: '4rem'}}>
-      <div style={{marginLeft: '11rem',width: '1000px', height: '10px', backgroundColor: '#F8C70E', borderRadius: '10px'}}>
-        <C.Point />
-        <C.SecondPoint />
-        <C.ThreePoint />
-        <C.FourPoint />
-        <C.FivePoint />
-      </div>
-    </div>
+    <StepBar currentStep={4} />
     <C.Container>
       <C.Content>
         <h1>{state.subject}</h1>

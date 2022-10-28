@@ -5,10 +5,8 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
-export const BarsWrapper = styled.div`
-
 `;
+
 export const Point = styled.div`
     width: 32px;
     height: 32px;
@@ -78,6 +76,10 @@ export const Content = styled.main`
   align-items: center;
   margin-right: 25rem;
   flex-direction: column;
+  @media (max-width: 768px) {
+    margin-right: 0rem;
+    margin-top: 4rem;
+  }
 
   h3{
     font-weight: 500;
