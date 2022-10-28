@@ -6,7 +6,72 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
 `
+export const BarsWrapper = styled.div`
 
+`;
+export const Point = styled.div`
+    width: 32px;
+    height: 32px;
+    border: 2px solid #F8C70E;
+    border-radius: 50%;
+    margin-left: 30px;
+    margin-right: -0px;
+    background-color: #574BBC;
+    position: relative;
+    top: -0.8rem;
+    left: -2rem;
+`;
+export const SecondPoint = styled.div`
+    width: 32px;
+    height: 32px;
+    border: 2px solid #F8C70E;
+    border-radius: 50%;
+    margin-left: 30px;
+    margin-right: -12px;
+    background-color: #F8C70E;
+    position: relative;
+    top: -2.8rem;
+    left: 12rem;
+`;
+
+export const ThreePoint = styled.div`
+  width: 32px;
+  height: 32px;
+  border: 2px solid #F8C70E;
+  border-radius: 50%;
+  margin-left: 30px;
+  margin-right: -12px;
+  background-color: #F8C70E;
+  position: relative;
+  top: -4.85rem;
+  left: 30rem;
+`;
+
+export const FourPoint = styled.div`
+  width: 32px;
+  height: 32px;
+  border: 2px solid #F8C70E;
+  border-radius: 50%;
+  margin-left: 30px;
+  margin-right: -12px;
+  background-color: #F8C70E;
+  position: relative;
+  top: -6.85rem;
+  left: 45rem;
+`;
+
+export const FivePoint = styled.div`
+  width: 32px;
+  height: 32px;
+  border: 2px solid #F8C70E;
+  border-radius: 50%;
+  margin-left: 30px;
+  margin-right: -12px;
+  background-color: #F8C70E;
+  position: relative;
+  top: -8.85rem;
+  left: 59rem;
+`;
 export const Content = styled.main`
   display: flex;
   justify-content: center;
