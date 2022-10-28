@@ -13,6 +13,10 @@ export const WrapperButtons = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-right: -16rem;
+  }
 `;
 export const Point = styled.div`
     width: 32px;
@@ -95,10 +99,19 @@ export const Content = styled.main`
     padding-top: 2rem;
     padding-bottom: 2rem;
     padding-left: 10rem;
+    @media (max-width: 768px) {
+      padding-bottom: 0rem;
+      padding-top: 0rem;
+      font-size: 40px;
+      padding-left: 0rem;
+    }
   }
 
   .inputs_step_1{
     margin-left: 12.5rem;
+    @media (max-width: 768px) {
+      padding-right: 12rem;
+    }
     label {
       font-size: 26px;
       line-height: 31px;
@@ -117,6 +130,10 @@ export const Content = styled.main`
         text-align: center;
         margin-bottom: 10px;
         outline: none;
+        @media (max-width: 768px) {
+          width: 300px;
+          font-size: 25px;
+        }
       }
     }
   }

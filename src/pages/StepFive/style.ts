@@ -75,9 +75,15 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
   gap: 10rem;
+  @media (max-width: 768px) {
+    margin-left: 2rem;
+    gap: 2rem;
+  }
 `;
 export const WrapperItem = styled.div`
-  
+   @media (max-width: 768px) {
+    font-size: 18px;
+   }
 `;
 
 export const Content = styled.main`
@@ -98,6 +104,12 @@ export const Content = styled.main`
     padding-top: 2rem;
     padding-bottom: 2rem;
     padding-left: 10rem;
+    @media (max-width: 768px) {
+      padding-bottom: 0rem;
+      padding-top: 0rem;
+      font-size: 40px;
+      padding-left: 0rem;
+    }
   }
 
   .inputs_step_1{
