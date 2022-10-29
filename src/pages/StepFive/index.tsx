@@ -5,12 +5,26 @@ import React, { ChangeEvent, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { StepBar } from '../../components/StepBar';
 import { StepActions, useStep } from '../../context/StepsContext';
+import { getItemLocalStorage, setLocalStorage } from '../../utils/localstorage';
 import * as C from './style';
-import {} from './style';
+
 export const StepFive = () => {
   const history = useHistory();
   const {state, dispatch} = useStep();
   useEffect(() => {
+    let eventType = 'Aula';
+    let unit = state.unit;
+    let vacanciesRest = (state.vacancies - state.participants);
+    let participants = state.participants;
+    let date = state.dateEvent;
+    let hours = state.hours === '1' ? `${state.hours} Hora` : `${state.hours} Horas`;
+    setLocalStorage('@event_type', eventType);
+    setLocalStorage('@unit', `${unit}`);
+    setLocalStorage('@vacancies_rest', `${vacanciesRest}`);
+    setLocalStorage('@participants', `${participants}`);
+    setLocalStorage('@date', date);
+    setLocalStorage('@hours', hours);
+    setLocalStorage('@subject', state.subject);
     if(state.unit === ''){
       history.push('/');
     }else{
@@ -21,6 +35,30 @@ export const StepFive = () => {
     }
    
   },[])
+  const saveFile = async (blob: Blob) => {
+    const a = document.createElement('a');
+    a.download = 'data.txt';
+    a.href = URL.createObjectURL(blob);
+    a.addEventListener('click', (e) => {
+      setTimeout(() => URL.revokeObjectURL(a.href), 30 * 1000);
+    });
+    a.click();
+  };
+  const handleFinish = async () => {
+    let obj = {
+      eventType: 'Aula',
+      unit: getItemLocalStorage('@unit'),
+      vacancies_rest: getItemLocalStorage('@vacancies_rest'),
+      participants:  getItemLocalStorage('@participants'),
+      hours: getItemLocalStorage('@hours'),
+      date: getItemLocalStorage('@date'),
+      subject: getItemLocalStorage('@subject')
+    }
+    const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'});
+    await saveFile(blob);
+    window.location.href = '/';
+  }
+  
   
   
   return (
@@ -43,7 +81,7 @@ export const StepFive = () => {
           </C.WrapperItem>
         </C.Wrapper>
         <C.WrapperItem>
-          <button className='finally_button' onClick={() => window.location.href = '/'}>Finalizar</button>
+          <button className='finally_button' onClick={handleFinish}>Finalizar</button>
         </C.WrapperItem>
         
       </C.Content>

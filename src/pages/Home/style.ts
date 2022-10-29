@@ -96,6 +96,7 @@ export const Content = styled.main`
       padding-top: 0rem;
       padding-bottom: 0rem;
       font-size: 25px;
+      margin-left: -4rem;
     }
   }
 

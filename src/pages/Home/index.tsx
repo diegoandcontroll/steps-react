@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { ChangeEvent} from 'react';
+import React, { ChangeEvent, useEffect} from 'react';
 import { useHistory } from 'react-router-dom';
 import { StepBar } from '../../components/StepBar';
 import { StepActions, useStep } from '../../context/StepsContext';
@@ -7,6 +7,12 @@ import * as C from './style';
 export const Home = () => {
   const history = useHistory();
   const {state, dispatch} = useStep();
+  useEffect(() => {
+    const isDataLocalStorage = window.localStorage.length;
+    if(isDataLocalStorage > 0){
+      window.localStorage.clear();
+    }
+  }, []);
   const handleNextStep = () => {
     if(state.subject !== ''){
       history.push('/step');
