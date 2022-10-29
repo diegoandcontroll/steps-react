@@ -56,7 +56,7 @@ export const StepFive = () => {
     }
     const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'});
     await saveFile(blob);
-    history.push('/');
+    window.location.href = '/';
   }
   
   
